@@ -1,3 +1,8 @@
+import unittest
+
+from sorts.bubble_sort import bubble_sort
+
+
 class BaseSortTest:
     def sort(self, data):
         return data
@@ -25,3 +30,9 @@ class BaseSortTest:
     def test_miracle_elements(self):
         data = [5, -5]
         self.assertEqual(self.sort(data), [-5, 5])
+
+
+class TestBubbleSorts(unittest.TestCase, BaseSortTest):
+    def sort(self, data):
+        return bubble_sort(data)
+
