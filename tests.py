@@ -1,6 +1,7 @@
 import unittest
 
 from sorts.bubble_sort import bubble_sort
+from sorts.merge_sort import merge_sort
 
 
 class BaseSortTest:
@@ -36,3 +37,7 @@ class TestBubbleSorts(unittest.TestCase, BaseSortTest):
     def sort(self, data):
         return bubble_sort(data)
 
+
+class TestMergeSort(unittest.TestCase, BaseSortTest):
+    def sort(self, data):
+        return merge_sort(data)
