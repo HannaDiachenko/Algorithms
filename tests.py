@@ -2,6 +2,7 @@ import unittest
 
 from sorts.bubble_sort import bubble_sort
 from sorts.merge_sort import merge_sort
+from sorts.quick_sort import quick_sort
 
 
 class BaseSortTest:
@@ -41,3 +42,8 @@ class TestBubbleSorts(unittest.TestCase, BaseSortTest):
 class TestMergeSort(unittest.TestCase, BaseSortTest):
     def sort(self, data):
         return merge_sort(data)
+
+
+class TestQuickSort(unittest.TestCase, BaseSortTest):
+    def sort(self, data):
+        return quick_sort(data)
